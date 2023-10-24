@@ -31,8 +31,6 @@ function App() {
           })
         }
       </select>
-      <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${currPkmn}.png`} alt={currPkmn} />
-
         <PkmnInfo currPkmn={currPkmn} />
 
     </div>
