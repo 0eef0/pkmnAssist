@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     getPkmn()
     .then(setIsLoading(false))
-    .then(console.log(pkmn))
+    //.then(console.log(pkmn))
     .catch((err) => {
       console.log(err);
     })
@@ -24,10 +24,10 @@ function App() {
 
   return (
     <div className="App">
-      <select name="pkmn" id="pkmn" onChange={evt => { setCurrPkmn(evt.target.value + 1) }}>
+      <select name="pkmn" id="pkmn" onChange={evt => { setCurrPkmn(evt.target.value) }}>
         {
           pkmn.map((pkmn, i) => {
-            return <option value={i} key={pkmn.name}>{pkmn.name}</option>
+            return <option value={i + 1} key={pkmn.name}>{pkmn.name}</option>
           })
         }
       </select>
